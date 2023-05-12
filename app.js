@@ -5,7 +5,6 @@ const mysql = require('mysql');
 const path = require('path');
 const multer = require('multer');
 const hbs = require('hbs');
-// hello
 // Create connection
 const connection = mysql.createConnection({
     host: "localhost",
