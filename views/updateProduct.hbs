@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .update-product-page {
+            width: 400px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            background: #333333;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        .form input {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        .form button {
+            text-transform: uppercase;
+            outline: 0;
+            background: #FF4201;
+            width: 100%;
+            border: 0;
+            border-radius: 5px;
+            padding: 20px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+
+        .form button:hover,
+        .form button:active,
+        .form button:focus {
+            background: #8a2301;
+        }
+
+        .form .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+        }
+
+        body {
+            padding-top: 10.5rem;
+            padding-bottom: 6rem;
+            text-align: center;
+            background-image: url(../assets/img/bgr.jpg);
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .title {
+            color: #FF4201;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="update-product-page">
+        <div class="form">
+            <h1 class="title">Update Product</h1>
+            <form class="login-form" action="/updateProduct" method="POST" enctype="multipart/form-data">
+                <input type="text" placeholder="Product Id" value="{{object.Id}}" name="id" readonly />
+                <input type="text" placeholder="Product Name" value="{{object.Name}}" name="name" />
+                <input type="text" placeholder="Product Price" value="{{object.Price}}" name="price" />
+                <input class="btn-choose-file" type="file" name="image"></input>
+                <button>Update</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
